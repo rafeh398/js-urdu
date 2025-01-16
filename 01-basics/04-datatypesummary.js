@@ -25,4 +25,34 @@
  console.log(typeof myFunction);  //its datatype is function
  
 
+// ******************** stack and heap memory************************
+
+// stack (primitive) ,,  heap (non-primitive)
+//stack k ander  jab ap koi cheez lete hain to apko copy milti ha 
+// but HEAP k ander koi cheez rkho to reference milta ha
+
+// start with making string variable which goes to stack
+
+let myName="rafeh"
+let anotherName= myName
+anotherName="aatif"
+
+console.log(myName)
+
+console.log(anotherName)   // output is rafeh and aatif (alag alag value)
+
+
+// // start with making object which goes to Heap
+
+let user1={
+   email: "user1@gmail.com",
+   age: 20
+}
+
+let user2 = user1
+
+user2.email="user2@gmail.com"
+
+console.log(user1.email);
+console.log(user2.email); // output mein dono ki value same ayegi 2nd wali (user2@gmail.com)
 
