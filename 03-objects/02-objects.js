@@ -56,4 +56,19 @@ const obj2={ 3: "c",
  
  
 
+ // De-Structure
+
+ const course={
+    coursename: "js hindi",
+    price:"999",
+    courseInstructor: "hitesh"
+ }
+ const {courseInstructor:instructor}=course
+ console.log(instructor);  //we took course instructor and destructure it into instructor 
+ // Output is Hitesh
  
+
+ // API INTRODUCTION
+
+ // jab ap apna kam dusro k ser pe dal dete hain usi ko api kete hain
+ // json formatter is a tool to understand api
