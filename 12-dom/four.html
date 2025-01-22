@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    //**********create element 
+
+    function addLanguage(langName) {
+        //first create li
+        const li= document.createElement("li")
+        li.innerHTML=`${langName}`
+        document.querySelector(".language").appendChild(li)  //language class ko select kiya
+        //usko li se append kr diya
+
+        
+    }
+    addLanguage("python")
+    addLanguage("c ++")     //this will show on page
+    // space issue
+
+    //************ optimize way to add element
+
+    function optimizeWay(langName) {
+        const li= document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+        //is mein direct textnode add kiya
+    }
+    optimizeWay("java")
+    //ye b show hugi but ye good way ha pura tree travel ni krna prega//2 bar appenChild
+
+    //**********edit 
+
+        // same like create element but use replace with instead of 2nd element
+
+function replace(langName) {
+        const li= document.createElement("li")
+        li.appendChild(document.createTextNode(langName)) //u can use textContent too
+        document.querySelector(".language li:nth-child(2)").replaceWith(li)
+        //is mein direct textnode add kiya
+    }
+ replace("go-lang")
+
+
+ //**********remove
+
+ const lastLang= document.querySelector(".language li:last-child")
+ lastLang.remove()  //removes last element (python)
+
+
+</script>

@@ -1,0 +1,109 @@
+// document object model 
+//console.dir(document) wrire in console to see document
+//view diagram of dom from google
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>\
+
+
+//console
+
+// document.getElementById("title")
+document.getElementById("title").getAttribute('id')
+// document.getElementById("title").setAttribute('class', "heading2"); //will change class to heading2
+
+//same like u access css
+//title.style.backgroundColor="green"
+
+//same u can access text
+//title.textContent //shows all content which is even not visible due to css
+//title.innerText// shows only visible text
+// title.innerHTML //shows all html
+
+
+//********difference between html collection and node list***********
+
+
+HTMLCollection items can be accessed by their name, id, or index number.
+
+NodeList items can only be accessed by their index number.
+
+An HTMLCollection is always a live collection. Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.
+
+A NodeList is most often a static collection. Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.
+//************************
+
+
+//************document.querySelector
+//If multiple elements match the selector, only the first one is returned.
+
+
+//Get the first <p> element:
+
+    document.querySelector("p");
+
+// Get the first element with class="example":
+
+   document.querySelector(".example");
+
+//Get the first <p> element in with class="example":
+
+    document.querySelector("p.example");   // same u can call id by # instead of .
+
+//Select the first <p> element with the parent is a <div> element.
+
+        document.querySelector("div > p");
+        //****************
+
+
+
+//********************
+        //querySelectorAll
+        //********************
+
+        //The querySelectorAll() method Returns: A NodeList (an array-like object) containing all matching elements that match the given CSS selector.
+        //A NodeList is an array-like collection (list) of nodes.(but not an array)
+        //The nodes in the list can be accessed by index. The index starts at 0.
+        //use for each on node-list
+
+
+
+  //***********************getElementByclassNmae  
+  //return HTMLCollection    
+
+  //Get all elements with class="example":
+
+  const collection = document.getElementsByClassName("example");
+  // for each is not applied on html collection
+  //so convert it in array ny Array.from(templist) 
+  // templist is variable in which html collection is stored
+
