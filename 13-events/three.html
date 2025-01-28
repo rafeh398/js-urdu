@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   const date=function(str){
+console.log(str, Date.now());  // function bnaya or date mein rkha
+
+    }
+
+let interval;  //global mein variable bnaya
+
+
+
+
+
+    document.querySelector("#start").addEventListener("click", function(){
+       let interval= setInterval(date,2000,"hi") // interval bnata
+       
+        })
+
+
+    
+    document.querySelector("#stop").addEventListener("click", function(){  //start pe date lga diya
+         clearInterval(interval) 
+
+    })
+
+
+
+
+
+</script>
+</html>
